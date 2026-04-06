@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Static Portfolio Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+
+    /* Header */
+    header { background: #0078d4; color: white; padding: 1rem 0; }
+    header .header-container { display: flex; justify-content: space-between; align-items: center; }
+    header nav a { color: white; margin-left: 1.2rem; font-weight: 600; }
+
+    /* Hero / About */
+    .hero-section { padding: 3rem 2rem; background: #e0f0ff; text-align: center; }
+    .hero-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero-section p { font-size: 1.1rem; }
+
+    /* Projects */
+    .projects-section { padding: 4rem 0; }
+    .section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+    .project-card {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+
+    .project-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .project-type { font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
+    .project-desc { font-size: 0.95rem; margin-bottom: 0.8rem; }
+    .project-tech span {
+      display: inline-block;
+      background: #e0f0ff;
+      color: #0078d4;
+      padding: 0.2rem 0.5rem;
+      margin: 0.2rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .project-footer { margin-top: 1rem; }
+    .project-link {
+      display: inline-block;
+      background: #0078d4;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      margin-top: 0.3rem;
+      transition: background 0.3s;
+    }
+    .project-link:hover { background: #005fa3; }
+
+    /* Contact Section */
+    .contact-section { background: #e0f0ff; padding: 3rem 0; text-align: center; }
+
+    /* Footer */
+    footer { background: #0078d4; color: white; text-align: center; padding: 1.5rem 0; }
+
+    /* Button */
+    .btn-primary {
+      background: #0078d4;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">My Azure Portfolio</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / About -->
+  <section id="about" class="hero-section">
+    <div class="container">
+      <h2>About This Project</h2>
+      <p>This portfolio demonstrates cloud deployment basics using Azure Storage and Azure CDN. Fully static, secured with HTTPS, and optimized for fast global delivery.</p>
+      <a href="#projects" class="btn-primary">View Project</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Featured Project</h2>
+      <div class="projects-grid">
+        <!-- Azure Static Portfolio Hosting -->
+        <div class="project-card">
+          <div class="project-title">Azure Static Portfolio Hosting</div>
+          <div class="project-type">Cloud · Azure Storage · CDN</div>
+          <p class="project-desc">
+            Hosting a static version of my portfolio on Azure Storage with static website hosting enabled, fronted by Azure CDN and secured with HTTPS.
+          </p>
+          <div class="project-tech">
+            <span>Microsoft Azure</span>
+            <span>Azure Storage</span>
+            <span>Azure CDN</span>
+            <span>Static Website</span>
+          </div>
+          <div class="project-footer">
+            <span>Focus: Cloud deployment basics</span><br>
+            <a href="https://sadham-git01.github.io/Portfolios/" target="_blank" class="project-link">
+  🌐 Live Demo
+</a><br>
+
+<a href="https://github.com/sadham-git01/Portfolios" target="_blank" class="project-link">
+  💻 GitHub Code
+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: yourname@example.com</p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="#" target="_blank">github.com/yourprofile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 My Azure Portfolio</p>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll JS -->
+  <script>
+    document.querySelectorAll('header nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
