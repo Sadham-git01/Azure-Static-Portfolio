@@ -1,0 +1,77 @@
+/* General */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Header */
+header { background: #0078d4; color: white; padding: 1rem 0; }
+header .header-container { display: flex; justify-content: space-between; align-items: center; }
+header nav a { color: white; margin-left: 1.2rem; font-weight: 600; }
+
+/* Hero / About */
+.hero-section { padding: 3rem 2rem; background: #e0f0ff; text-align: center; }
+.hero-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+.hero-section p { font-size: 1.1rem; }
+
+/* Projects */
+.projects-section { padding: 4rem 0; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+
+.project-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+
+.project-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+.project-type { font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
+.project-desc { font-size: 0.95rem; margin-bottom: 0.8rem; }
+.project-tech span {
+  display: inline-block;
+  background: #e0f0ff;
+  color: #0078d4;
+  padding: 0.2rem 0.5rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.project-footer { margin-top: 1rem; }
+.project-link {
+  display: inline-block;
+  background: #0078d4;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin-top: 0.3rem;
+  transition: background 0.3s;
+}
+.project-link:hover { background: #005fa3; }
+
+/* Contact Section */
+.contact-section { background: #e0f0ff; padding: 3rem 0; text-align: center; }
+
+/* Footer */
+footer { background: #0078d4; color: white; text-align: center; padding: 1.5rem 0; }
+
+/* Button */
+.btn-primary {
+  background: #0078d4;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #005fa3; }
